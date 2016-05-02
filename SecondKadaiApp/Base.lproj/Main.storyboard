@@ -78,17 +78,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdE-jh-H8l">
-                                <rect key="frame" x="285" y="112" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="RDD-El-Pab"/>
-                                    <constraint firstAttribute="height" constant="30" id="cCn-HF-4A1"/>
-                                </constraints>
-                                <state key="normal" title="戻る"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="iSV-us-QSS"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpt-sT-pFO">
                                 <rect key="frame" x="179" y="66" width="242" height="21"/>
                                 <constraints>
@@ -99,12 +88,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtp-2X-bZr">
+                                <rect key="frame" x="277" y="105" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GtH-99-f0X"/>
+                                    <constraint firstAttribute="width" constant="46" id="YyV-Cx-wQa"/>
+                                </constraints>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="foM-XW-4NJ" kind="unwind" unwindAction="unwind:" id="ieP-i6-XUQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IdE-jh-H8l" firstAttribute="centerX" secondItem="V12-39-uup" secondAttribute="centerX" id="0iM-k4-tEa"/>
                             <constraint firstItem="Qpt-sT-pFO" firstAttribute="centerX" secondItem="V12-39-uup" secondAttribute="centerX" id="85H-5c-aLN"/>
-                            <constraint firstItem="IdE-jh-H8l" firstAttribute="top" secondItem="Qpt-sT-pFO" secondAttribute="bottom" constant="25" id="Zxy-8U-fC1"/>
+                            <constraint firstItem="Vtp-2X-bZr" firstAttribute="top" secondItem="Qpt-sT-pFO" secondAttribute="bottom" constant="8" id="YFZ-f1-9x9"/>
+                            <constraint firstItem="Vtp-2X-bZr" firstAttribute="centerX" secondItem="V12-39-uup" secondAttribute="centerX" id="b1M-3J-WjZ"/>
                             <constraint firstItem="Qpt-sT-pFO" firstAttribute="top" secondItem="WWp-pF-05t" secondAttribute="bottom" constant="46" id="vuU-4K-kRf"/>
                         </constraints>
                     </view>
@@ -113,6 +113,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JdM-nh-lSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="foM-XW-4NJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="934" y="189"/>
         </scene>
